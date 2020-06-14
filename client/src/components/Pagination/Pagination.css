@@ -1,0 +1,21 @@
+  
+.pag-li {
+  padding: 10px;
+  font-size: 20px;
+  display: inline-block;
+  max-width: 50%; /* limit width */
+  word-break: break-all; /* wrap extended text*/
+}
+
+.pag-a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.pag-ul {
+  list-style: none;
+}
