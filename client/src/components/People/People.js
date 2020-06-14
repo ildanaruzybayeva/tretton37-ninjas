@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Person from "../Person/Person";
 import "./People.css";
 import Loading from "./Loading";
+import { sortByNameAndOffice } from "./helpers/sortByNameAndOffice"
 
 const URL = "https://api.tretton37.com/ninjas";
 
@@ -16,6 +17,7 @@ function People() {
       .then(
         result => {
           setIsLoaded(true);
+          sortByNameAndOffice(result)
           setItems(result);
         },
         error => {
