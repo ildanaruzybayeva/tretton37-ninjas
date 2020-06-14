@@ -3,6 +3,7 @@ import "./Person.css";
 import twitterIcon from "./icons/twitterIcon.png";
 import githubIcon from "./icons/githubIcon.png";
 import linkedinIcon from "./icons/linkedinIcon.png";
+
 function Person(props) {
   return (
     <div className="person">
