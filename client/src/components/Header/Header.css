@@ -1,0 +1,45 @@
+header {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0px;
+  background: linear-gradient(to right top, #ece9e6, #ffffff);
+}
+
+.logo {
+  height: 2rem;
+  width: 10rem;
+  margin-right: 1rem;
+}
+
+nav {
+  min-height: 10vh;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  justify-content: space-between;
+}
+
+nav > h1 {
+  background: linear-gradient(to right, #012851, #80c565, black);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 1500%;
+  animation: gradient 5s linear infinite alternate;
+  font-size: 1.4rem;
+}
+
+.logo:hover {
+    cursor: pointer;
+  transform: scale(1.2);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
