@@ -5,7 +5,7 @@
 ---
 
 <h1>1️⃣ _installation </h1> 
-<p>As easy as simply clicking the gitpod button above, the code will automatically run react app and install all the dependencies. In oder to run tests, simply type 'npm test a' when the react app has finished initialization and available on port 3000</p>
+<p>As easy as simply clicking the gitpod button above, the code will automatically run react app and install all the dependencies. Gitpod launches ready-to-code dev environments. Treat like an online IDE. However, in oder to run tests, open a new terminal window, cd into client folder and type 'npm test a' when the react app has finished initialization. </p>
 
 <h1>2️⃣️ _features and functional requirements implemented</h1>
 <h3>_design/accessibility 🌺</h3>
