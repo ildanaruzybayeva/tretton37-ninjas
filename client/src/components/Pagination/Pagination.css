@@ -1,10 +1,12 @@
 .pag {
-  margin-left: 1.5em;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 1.5em;
 }
 
 .pag-li {
   padding: 10px;
-  font-size: 20px;
+  font-size: 18px;
   display: inline-block;
   max-width: 50%; /* limit width */
   word-break: break-all; /* wrap extended text*/
@@ -16,7 +18,7 @@
 }
 
 a:hover {
-  color: yellow;
+  color: #80c565;
 }
 
 .pag-ul {

@@ -13,7 +13,15 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
       <ul className="pag-ul">
         {pageNumbers.map(number => (
           <li key={number} className="pag-li">
-            <a onClick={() => paginate(number)} href="!#" className="pag-a">
+            <a
+              onClick={e => {
+                e.preventDefault();
+                window.scrollTo(0, 0);
+                paginate(number);
+              }}
+              href="!#"
+              className="pag-a"
+            >
               {number}
             </a>
           </li>
