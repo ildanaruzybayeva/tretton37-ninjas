@@ -40,3 +40,5 @@ I have chosen to approach the task using React library for the following reasons
 <b>Secondly</b>, since the app doesn't yet have filter tools and search bar, <b>sorting people by name and office on load time</b> was a must. It helps any user to navigate through the names when looking for a person. <b>The sorting function is located in helpers folder which can be further used to add other sorting and filtering methods</b>. The app has pagination implemented where only first 12 people are displayed from the API array.
 
 <b>Finally</b>, React has <b>in-built testing and deployment tools</b> which were utilised to do unit testing and deploy the website to a publicly available url.
+
+https://tretton-37-code-test.netlify.app/
