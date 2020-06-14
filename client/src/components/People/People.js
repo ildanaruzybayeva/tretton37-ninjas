@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Person from "../Person/Person";
 import "./People.css";
+import Loading from "./Loading";
 
 const URL = "https://api.tretton37.com/ninjas";
 
@@ -27,7 +28,11 @@ function People() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return (
+      <div className="Loading-screen">
+        <Loading />
+      </div>
+    );
   } else {
     return (
       <div className="People">
