@@ -1,0 +1,7 @@
+.People {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+  flex: 0 5 calc(20% - 20px);
+}
