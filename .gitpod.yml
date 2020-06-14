@@ -9,4 +9,4 @@ tasks:
 
   - name: test
     before: cd client
-    command: npm test
+    command: npm test a
