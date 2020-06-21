@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Person from "../Person/Person";
 import "./People.css";
-import Loading from "./Loading";
+import Loading from "../Loading/Loading";
 import { sortByNameAndOffice } from "./helpers/sortByNameAndOffice";
 import Pagination from "../Pagination/Pagination";
+import FilterTool from "../FilterTool/FilterTool";
 
 const API_URL = "https://api.tretton37.com/ninjas";
 
@@ -13,6 +14,7 @@ function People() {
   const [items, setItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(12);
+  const [currOffice, setOffice] = useState("All");
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -22,20 +24,32 @@ function People() {
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   useEffect(() => {
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(
-        result => {
-          setIsLoaded(true);
-          sortByNameAndOffice(result);
-          setItems(result);
-        },
-        error => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }, []);
+    async function filterData() {
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(
+          result => {
+            setIsLoaded(true);
+            sortByNameAndOffice(result);
+            setItems(
+              currOffice === "All"
+                ? result
+                : result.filter(o => o.office === currOffice)
+            );
+          },
+          error => {
+            setIsLoaded(true);
+            setError(error);
+          }
+        );
+    }
+    filterData();
+  }, [currOffice]);
+
+  const chooseOffice = e => {
+    e.preventDefault();
+    setOffice(e.target.value);
+  };
 
   return (
     <div className="People">
@@ -45,10 +59,12 @@ function People() {
         </div>
       ) : (
         <section className="container">
+          <FilterTool chooseOffice={chooseOffice} />
           <div className="People-info">
             {currentPosts.map(p => {
               return (
                 <Person
+                  key={p.name}
                   img={p.imagePortraitUrl}
                   name={p.name}
                   office={p.office}
