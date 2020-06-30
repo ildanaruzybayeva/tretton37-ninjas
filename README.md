@@ -43,4 +43,4 @@ I have chosen to approach the task using React library for the following reasons
 
 <b>Finally</b>, React has <b>in-built testing and deployment tools</b> which were utilised to do unit testing and deploy the website to a publicly available url.
 
-https://tretton-37-code-test.netlify.app/
+https://tretton37-ninjas.netlify.app/
